@@ -1,0 +1,39 @@
+a functionlity where the user can give the gote
+
+models
+routes
+
+1.voting functionlity:
+
+2.user signin/signup
+3.see the list of the candidate those who are stand for election.
+4.vote one of the candidate after votinf user can't vote again.
+5.there is a route whichs shows the list of the candidate and their live vote counts sorted by their vote count.
+6. user data mus contain their one unique goverment id proof named: adhar card number
+7. there should be one admin who can only maintain the table of condidate and he can't able to vote at all.
+8. user can change their password.
+9. admin can't vote
+
+------------
+
+Routes:
+user Authentication:
+  /signup : post -create a new user account
+  /login : post -  login into an existing account (adhar card and username and password)
+
+voting:
+   /candidates: get -get the list of the candidate
+   /vote/:candidateId : post -vote for a specefic candidate
+
+vote count:
+   /vote/counts : get get the list of the candidate sorted by their vote count
+
+user profile: 
+   /profile : get - get the user's profile information
+   /profile/password : put - changes the user profile password
+
+Admin candidate management:
+   /candidates: post - create a new candidate
+   /candidate/:candidatesId : put - Update annexisting candidate
+   /candidate/:candidatesId : delete - delete the candidate from the list
+
